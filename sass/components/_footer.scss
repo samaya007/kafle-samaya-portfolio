@@ -4,8 +4,17 @@ footer {
   margin-top: auto;
 }
 
+.social-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); 
+}
+
+
 @media (max-width: 768px) {
   footer {
-      font-size: 14px;
+    font-size: 14px;
   }
 }

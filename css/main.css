@@ -240,7 +240,7 @@ body {
   width: 85%;
   background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
   border-radius: 6px;
-  padding: 20px 60px 30px 40px;
+  padding: 10px 6px 30px 40px;
   box-shadow: 0 5px 10px rgba(254, 254, 254, 0.831);
 }
 
@@ -320,6 +320,7 @@ body {
   border-radius: 6px;
   padding: 0 15px;
   resize: none;
+  margin-top: 28px;
 }
 
 .right-side .message-box {
@@ -336,15 +337,22 @@ body {
 }
 
 .right-side .button input[type=button] {
-  color: #000000;
-  font-size: 18px;
-  outline: none;
-  border: none;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
   padding: 8px 16px;
-  border-radius: 6px;
-  background: #ffcd03;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.7s;
+}
+
+.right-side .button input[type=button]:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  border-radius: 50px;
 }
 
 @media (max-width: 950px) {

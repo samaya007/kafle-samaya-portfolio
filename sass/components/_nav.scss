@@ -38,19 +38,50 @@ nav a:hover {
 
 }
 
+
+
+
+
 /* Underline effect for .samaya-text */
 nav a.samaya-text {
-  border-bottom: 2px solid white; /* Add underline style */
-  transition: border-bottom 0.3s ease;
+  position: relative;
+  color: inherit; /* or specify the color you want for .samaya-text */
+  text-decoration: none;
 }
 
-/* Exclude .samaya-text from hover effect */
-nav a.samaya-text.active,
-nav a.samaya-text:hover {
-  background: none;
-  color: inherit; /* or specify the color you want for .samaya-text */
-  border-bottom: 2px solid transparent; /* Remove underline on hover */
+nav a.samaya-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
 }
+
+/* Increase the width on hover for screens larger than 768px */
+@media screen and (min-width: 768px) {
+  nav a.samaya-text:hover::before {
+    width: 100%;
+  }
+
+  /* Exclude .samaya-text from hover effect on mobile */
+  nav a.samaya-text.active::before,
+  nav a.samaya-text.active {
+    width: 100%;
+  }
+}
+
+/* Optional: Remove text underline */
+nav a.samaya-text:hover {
+  text-decoration: none;
+}
+
+
+
+
+
 
 .checkbtn {
   font-size: 30px;

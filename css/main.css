@@ -1,10 +1,15 @@
 footer {
-  background-color: #333;
-  color: #fff;
   padding: 20px;
   text-align: center;
   margin-top: auto;
-  background: linear-gradient(109.6deg, rgb(11, 1, 1) 11.2%, rgb(46, 192, 209) 91.1%);
+}
+
+.social-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
@@ -44,11 +49,47 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Add a transition for the color property */
 }
 
-a.active, a:hover {
-  background: #f44336;
-  transition: 0.5s;
+nav a.active,
+nav a:hover {
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white color on hover */
+}
+
+/* Underline effect for .samaya-text */
+nav a.samaya-text {
+  position: relative;
+  color: inherit; /* or specify the color you want for .samaya-text */
+  text-decoration: none;
+}
+
+nav a.samaya-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+/* Increase the width on hover for screens larger than 768px */
+@media screen and (min-width: 768px) {
+  nav a.samaya-text:hover::before {
+    width: 100%;
+  }
+  /* Exclude .samaya-text from hover effect on mobile */
+  nav a.samaya-text.active::before,
+  nav a.samaya-text.active {
+    width: 100%;
+  }
+}
+/* Optional: Remove text underline */
+nav a.samaya-text:hover {
+  text-decoration: none;
 }
 
 .checkbtn {
@@ -104,6 +145,10 @@ a.active, a:hover {
     left: 0;
   }
 }
+.samaya-text {
+  color: rgb(255, 255, 255);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -174,12 +219,13 @@ body {
   background: transparent;
   position: relative;
   cursor: pointer;
+  transition: 0.7s; /* Apply transition to both hover and default state */
 }
 
 .hero-btn:hover {
   border: 1px solid #f44336;
   background: #f44336;
-  transition: 0.5s;
+  border-radius: 50px;
 }
 
 .contactbox {
@@ -333,4 +379,38 @@ body {
     width: 100%;
     margin-left: 0;
   }
+}
+.image-size {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect */
+.image-size:hover {
+  transform: scale(1.05);
+  filter: brightness(85%);
+}
+
+.morebilly {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.morebilly:hover {
+  background-color: #0056b3;
+}
+
+.about-project {
+  color: #ffffff;
+  font-size: 50px;
 }

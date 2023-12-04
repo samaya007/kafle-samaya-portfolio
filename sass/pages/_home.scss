@@ -39,6 +39,7 @@
     margin: 10px 0px 40px;
     color: #B8A03F;
   }
+  
   @media (max-width: 858px) {
     .text-box {
         width: 80%;
@@ -63,9 +64,11 @@
     background: transparent;
     position: relative;
     cursor: pointer;
+    border-radius: 50px;
   }
   .hero-btn:hover {
     border: 1px solid #f44336;
+    border-radius: 50px;
     background: #f44336;
     transition: 0.5s;
   }

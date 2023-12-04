@@ -28,11 +28,30 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; /* Add a transition for the color property */
 }
-a.active, a:hover {
-  background: #f44336;
-  transition: 0.5s;
+
+nav a.active,
+nav a:hover {
+  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white color on hover */
+
 }
+
+/* Underline effect for .samaya-text */
+nav a.samaya-text {
+  border-bottom: 2px solid white; /* Add underline style */
+  transition: border-bottom 0.3s ease;
+}
+
+/* Exclude .samaya-text from hover effect */
+nav a.samaya-text.active,
+nav a.samaya-text:hover {
+  background: none;
+  color: inherit; /* or specify the color you want for .samaya-text */
+  border-bottom: 2px solid transparent; /* Remove underline on hover */
+}
+
 .checkbtn {
   font-size: 30px;
   color: white;

@@ -50,18 +50,18 @@ nav ul li a {
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none; /* Remove default underline */
-  transition: color 0.3s ease; /* Add a transition for the color property */
+  transition: color 0.3s ease;
 }
 
 nav a.active,
 nav a:hover {
-  color: rgba(255, 255, 255, 0.7); /* Slightly transparent white color on hover */
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* Underline effect for .samaya-text */
 nav a.samaya-text {
   position: relative;
-  color: inherit; /* or specify the color you want for .samaya-text */
+  color: white; /* or specify the color  for .samaya-text */
   text-decoration: none;
 }
 
@@ -76,18 +76,17 @@ nav a.samaya-text::before {
   transition: width 0.3s ease;
 }
 
-/* Increase the width on hover for screens larger than 768px */
 @media screen and (min-width: 768px) {
   nav a.samaya-text:hover::before {
     width: 100%;
   }
-  /* Exclude .samaya-text from hover effect on mobile */
+  /* Exclude  hover effect on mobile */
   nav a.samaya-text.active::before,
   nav a.samaya-text.active {
     width: 100%;
   }
 }
-/* Optional: Remove text underline */
+/*  Remove text underline */
 nav a.samaya-text:hover {
   text-decoration: none;
 }
@@ -230,6 +229,7 @@ body {
 
 .contactbox {
   min-height: 80vh;
+  margin-top: -20px;
   width: 100%;
   display: flex;
   align-items: center;

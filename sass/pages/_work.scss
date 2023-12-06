@@ -1,32 +1,82 @@
-.image-size {
-    max-width: 100%;
-    height: 400px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, filter 0.3s ease;
-  }
-  /* Hover effect */
-  .image-size:hover {
-    transform: scale(1.05);
-    filter: brightness(85%);
-  }
-  .morebilly {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  .morebilly:hover {
-    background-color: #0056b3;
-  }
-  
-  
 .about-project {
-    color: #ffffff;
-    font-size: 50px;
+  color: #ffffff;
+  font-size: 40px;
+}
+
+.billylaunched {
+  color: white;
+}
+
+/* 000 */
+
+.morebilly {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  display: none; /* Hide the button by default */
+}
+
+
+/* Media query for screens with a maximum width of 1199px (covers tablets and smaller screens) */
+@media only screen and (max-width: 1199px) {
+  .morebilly {
+    display: block; /* Display the button on mobile and tablet screens */
+    margin-top: 20px; /* Add some spacing for better appearance */
   }
+
+  /* Adjust the max-width value as needed based on your tablet screen size */
+  .seven {
+    pointer-events: none;
+  }
+
+  .hover-title {
+    display: none;
+  }
+
+}
+
+.image-container {
+  position: relative;
+}
+
+.seven {
+  transition: filter 0.3s ease-in-out;
+}
+
+.seven:hover {
+  filter: blur(2px); /* Adjust the blur value as needed */
+}
+
+/* Adjust the selector based on your HTML structure */
+.hover-content .hover-title {
+  font-size: 28px;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media only screen and (min-width: 1199px) {
+  .image-container:hover .seven {
+    filter: blur(5px); /* Adjust the blur value as needed */
+  }
+
+  .hover-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .image-container:hover .hover-content {
+    opacity: 1;
+  }
+}
+

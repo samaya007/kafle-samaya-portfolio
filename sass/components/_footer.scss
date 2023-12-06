@@ -1,14 +1,20 @@
-
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: auto;
-    background: linear-gradient(109.6deg, rgb(11, 1, 1) 11.2%, rgb(46, 192, 209) 91.1%);
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.social-icon {
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  transform: scale(1.2); 
+}
+
+
+@media (max-width: 768px) {
+  footer {
+    font-size: 14px;
   }
-  @media (max-width: 768px) {
-    footer {
-        font-size: 14px;
-   }
-  }
+}

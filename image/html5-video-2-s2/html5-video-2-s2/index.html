@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- in mobile set initial zoom level of page to 100%, set site size to equal device width not a larger canvas that is shrunk down-->
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+    <title>HTML5 Video</title>
+    <!-- Link to reset or normalize before main.css
+    only choose one -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+    <div class="grid-con">
+        <section class="col-span-full" id="player-container">
+            <video controls poster="images/placeholder.jpg">
+                <source src="video/video.mp4" type="video/mp4">
+                <source src="video/video.webm" type="video/webm">
+                <p>You're using a very old browser, that doesn;t support video playback.</p>
+            </video>
+            <div class="video-controls hidden" id="video-controls">
+                <button id="play-button">
+                    <i class="fa fa-play-circle-o"></i>
+                </button>
+                <button id="pause-button">
+                    <i class="fa fa-pause-circle-o"></i>
+                </button>
+                <button id="stop-button">
+                    <i class="fa fa-stop-circle-o"></i>
+                </button>
+                <i class="fa fa-volume-up"></i>
+                <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+                <button id="full-screen">
+                    <i class="fa fa-arrows-alt"></i>
+                </button>
+            </div>
+        </section>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

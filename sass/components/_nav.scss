@@ -28,11 +28,60 @@ nav ul li a {
   padding: 7px 13px;
   border-radius: 3px;
   text-transform: uppercase;
+  text-decoration: none; /* Remove default underline */
+  transition: color 0.3s ease; 
 }
-a.active, a:hover {
-  background: #f44336;
-  transition: 0.5s;
+
+nav a.active,
+nav a:hover {
+  color: rgba(255, 255, 255, 0.7); 
+
 }
+
+
+
+
+
+/* Underline effect for .samaya-text */
+nav a.samaya-text {
+  position: relative;
+  color: white; /* or specify the color  for .samaya-text */
+  text-decoration: none;
+}
+
+nav a.samaya-text::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+@media screen and (min-width: 768px) {
+  nav a.samaya-text:hover::before {
+    width: 100%;
+  }
+
+  /* Exclude  hover effect on mobile */
+  nav a.samaya-text.active::before,
+  nav a.samaya-text.active {
+    width: 100%;
+  }
+}
+
+/*  Remove text underline */
+nav a.samaya-text:hover {
+  text-decoration: none;
+}
+
+
+
+
+
+
 .checkbtn {
   font-size: 30px;
   color: white;
@@ -45,6 +94,7 @@ a.active, a:hover {
 #check {
   display: none;
 }
+
 @media (max-width: 952px) {
   label.logo {
       font-size: 30px;
@@ -54,7 +104,7 @@ a.active, a:hover {
       font-size: 16px;
  }
 }
-@media (max-width: 858px) {
+@media (max-width: 768px) {
   .checkbtn {
       display: block;
  }
@@ -84,3 +134,9 @@ a.active, a:hover {
       left: 0;
  }
 }
+
+
+.samaya-text {
+  color: rgb(255, 255, 255);
+}
+

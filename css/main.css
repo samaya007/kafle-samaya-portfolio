@@ -263,6 +263,11 @@ body {
     font-size: 16px;
   }
 }
+#explode-view {
+  max-width: 100%;
+  /* width: 100vw; */
+}
+
 .contactbox {
   min-height: 80vh;
   margin-top: -20px;
@@ -635,6 +640,10 @@ body {
 }
 
 .image-casestudy {
+  position: relative;
+}
+
+.sevenimage-casestudy {
   position: relative;
 }
 

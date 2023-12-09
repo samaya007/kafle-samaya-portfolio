@@ -3,51 +3,43 @@
 //
 
 
+gsap.registerPlugin(ScrollTrigger);
 
- gsap.registerPlugin(ScrollTrigger);
+// Animation for ".sevenimage-casestudy"
+gsap.fromTo(".sevenimage-casestudy", {
+  opacity: 0,
+}, {
+  opacity: 1,
+  duration: 3,
+  scrollTrigger: {
+    trigger: ".seventextimage-casestudy",
+    toggleActions: "restart none none none",
+  },
+});
 
- gsap.fromTo(    //target element to animate
-   ".sevenimage-casestudy",
-   {
-     opacity: 0, // start with 0 opacity
-   },
-   {
-     opacity: 1, // end with full opacity
-     duration: 3,
-     scrollTrigger: {   //trigger for animation
-       trigger: ".seventextimage-casestudy",
-       toggleActions: "restart none none none",
-     },
-   }
- );
- 
- gsap.registerPlugin(ScrollTrigger);
+// Animation for '.codeimages'
+gsap.from('.codeimages', {
+  duration: 1,
+  y: '-1vw',
+  opacity: 0,
+  ease: 'power2.in',
+  scrollTrigger: {
+    trigger: ".skill",
+    toggleActions: "restart none none none",
+  },
+});
 
- gsap.from('.codeimages', {
-   duration: 1,
-   y: '-1vw',
-   opacity: 0,
-   ease: 'power2.in',
-   scrollTrigger: {
-     trigger: ".skill",
-     toggleActions: "restart none none none",
-   }
- });
- 
-
- gsap.registerPlugin(ScrollTrigger);
-
- gsap.from('.designimages', {
-   duration: 1,
-   y: '-1vw',
-   opacity: 0,
-   ease: 'power2.in',
-   scrollTrigger: {
-     trigger: ".skill",
-     toggleActions: "restart none none none",
-   }
- });
- 
+// Animation for '.designimages'
+gsap.from('.designimages', {
+  duration: 1,
+  y: '-1vw',
+  opacity: 0,
+  ease: 'power2.in',
+  scrollTrigger: {
+    trigger: ".skill",
+    toggleActions: "restart none none none",
+  },
+});
 
 
 
@@ -57,6 +49,7 @@
 
 
 
+//scroll animation earbuds
 
  (() => {
     const canvas = document.querySelector("#explode-view");

@@ -21,8 +21,39 @@
    }
  );
  
+ gsap.registerPlugin(ScrollTrigger);
 
+ gsap.from('.codeimages', {
+   duration: 1,
+   y: '-1vw',
+   opacity: 0,
+   ease: 'power2.in',
+   scrollTrigger: {
+     trigger: ".skill",
+     toggleActions: "restart none none none",
+   }
+ });
  
+
+ gsap.registerPlugin(ScrollTrigger);
+
+ gsap.from('.designimages', {
+   duration: 1,
+   y: '-1vw',
+   opacity: 0,
+   ease: 'power2.in',
+   scrollTrigger: {
+     trigger: ".skill",
+     toggleActions: "restart none none none",
+   }
+ });
+ 
+
+
+
+
+
+
 
 
 
@@ -34,6 +65,8 @@
     canvas.height = 1080;
     const frameCount = 140;
     const images = [];
+
+    
   
     const buds = {
       frame: 0,
@@ -70,6 +103,15 @@
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.drawImage(images[buds.frame], 0, 0);
     }
-  })();
-  
+  // Update canvas size on window resize (for mobile responsiveness)
+  window.addEventListener("resize", () => {
+    if (isMobile) {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        render();
+    }
+});
+})();
+
+
 

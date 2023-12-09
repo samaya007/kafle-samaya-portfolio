@@ -33,82 +33,27 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 
 
-/*
-.box-front .html-icon,
-.box-front .css-icon,
-.box-front .sass-icon,
-.box-front .js-icon {
-  width: 20%;
-  height: 20%;
-  object-fit: cover;
+
+.design {
+  color: rgb(255, 255, 255); 
+  margin-bottom: 20px;
 }
+ .skills{
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  font-size: 200px;
 
-.box-design .cinema,
-.box-design .ai,
-.box-design .pr,
-.box-design .ps,
-.box-design .af,
-.box-design .id,
-.box-design .xd,
-.box-design .figma {
-  width: 20%;
-  height: 20%;
-  object-fit: cover;
-}
+ }
 
-
-
-
-
-.flex-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-}
-
-.box-front {
-  width: 500px;
-  height: 500px;
-  border: 1px solid #cab4b400;
-  text-align: center;
-  line-height: 1.5; 
-  background-color: rgba(136, 118, 118, 0);
-  overflow: hidden;
-}
-
-
-.box-design {
-  width: 500px;
-  height: 500px;
-  border: 1px solid #00000000;
-  text-align: center;
-  line-height: 1.5; 
-  background-color: rgba(255, 255, 255, 0);
-}
-
-
-@media (max-width: 768px) {
-  .flex-container {
-    flex-direction: column;
+ @media (max-width: 767px) {
+  .skills {
+    font-size: 40px; /* Adjust the font size for mobile devices */
   }
 }
 
 
-*/
-
-
-.design {
-  color: green; 
-  margin-bottom: 20px;
-}
- .skills{
-  color: rgb(255, 0, 0);
-  margin-bottom: 20px;
-
- }
  .code{
-  color: salmon;
+  color: rgb(255, 255, 255);
   margin-bottom: 20px;
 
  }

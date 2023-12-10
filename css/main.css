@@ -65,7 +65,7 @@ nav a:hover {
 /* Underline effect for .samaya-text */
 nav a.samaya-text {
   position: relative;
-  color: white; /* or specify the color  for .samaya-text */
+  color: white;
   text-decoration: none;
 }
 
@@ -84,7 +84,6 @@ nav a.samaya-text::before {
   nav a.samaya-text:hover::before {
     width: 100%;
   }
-  /* Exclude  hover effect on mobile */
   nav a.samaya-text.active::before,
   nav a.samaya-text.active {
     width: 100%;
@@ -187,8 +186,30 @@ nav a.samaya-text:hover {
 }
 
 .designimage img:hover {
-  transform: scale(1.2); /* Zoom in on hover (adjust the scale factor as needed) */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Add a white glow effect (adjust values as needed) */
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+.designimages img {
+  width: 10%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.designimages img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
+}
+
+.codeimages img {
+  width: 10%;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.codeimages img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
 .hero-btn {
@@ -450,7 +471,6 @@ body {
   color: white;
 }
 
-/* 000 */
 .morebilly {
   background-color: #007bff;
   color: white;
@@ -459,16 +479,15 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  display: none; /* Hide the button by default */
+  display: none;
 }
 
-/* Media query for screens with a maximum width of 1199px (covers tablets and smaller screens) */
+/* Media query for screens with a maximum width of 1199px  */
 @media only screen and (max-width: 1199px) {
   .morebilly {
-    display: block; /* Display the button on mobile and tablet screens */
-    margin-top: 20px; /* Add some spacing for better appearance */
+    display: block;
+    margin-top: 20px;
   }
-  /* Adjust the max-width value as needed based on your tablet screen size */
   .seven {
     pointer-events: none;
   }
@@ -485,10 +504,9 @@ body {
 }
 
 .seven:hover {
-  filter: blur(2px); /* Adjust the blur value as needed */
+  filter: blur(2px);
 }
 
-/* Adjust the selector based on your HTML structure */
 .hover-content .hover-title {
   font-size: 28px;
   color: #ffffff;
@@ -500,7 +518,7 @@ body {
 
 @media only screen and (min-width: 1199px) {
   .image-container:hover .seven {
-    filter: blur(5px); /* Adjust the blur value as needed */
+    filter: blur(5px);
   }
   .hover-content {
     position: absolute;
@@ -555,7 +573,7 @@ body {
 
 @media (max-width: 767px) {
   .skills {
-    font-size: 40px; /* Adjust the font size for mobile devices */
+    font-size: 40px;
   }
 }
 .code {
@@ -563,35 +581,12 @@ body {
   margin-bottom: 20px;
 }
 
-.designimages img {
-  width: 10%;
-  height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth animation */
-}
-
-.designimages img:hover {
-  transform: scale(1.2); /* Zoom in on hover (adjust the scale factor as needed) */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Add a white glow effect (adjust values as needed) */
-}
-
-.codeimages img {
-  width: 10%;
-  height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth animation */
-}
-
-.codeimages img:hover {
-  transform: scale(1.2); /* Zoom in on hover (adjust the scale factor as needed) */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Add a white glow effect (adjust values as needed) */
-}
-
-/* Add these styles to your existing CSS file */
 .details .deliver {
-  color: red; /* Choose your desired color for h1 with class "deliver" */
+  color: red;
 }
 
 .details .project-info {
-  color: green; /* Choose your desired color for h2 and h3 with class "project-info" */
+  color: green;
 }
 
 .image-casestudy {

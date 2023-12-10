@@ -47,7 +47,7 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
  @media (max-width: 767px) {
   .skills {
-    font-size: 40px; /* Adjust the font size for mobile devices */
+    font-size: 40px; 
   }
 }
 
@@ -57,27 +57,4 @@ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 20px;
 
  }
-
-
- .designimages img {
-  width: 10%;
-  height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth animation */
-}
-
-.designimages img:hover {
-  transform: scale(1.2); /* Zoom in on hover (adjust the scale factor as needed) */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Add a white glow effect (adjust values as needed) */
-}
-
-.codeimages img {
-  width: 10%;
-  height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth animation */
-}
-
-.codeimages img:hover {
-  transform: scale(1.2); /* Zoom in on hover (adjust the scale factor as needed) */
-  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); /* Add a white glow effect (adjust values as needed) */
-}
 

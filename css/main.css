@@ -231,6 +231,54 @@ nav a.samaya-text:hover {
   border-radius: 50px;
 }
 
+.top {
+  --offset: 50px;
+  position: sticky;
+  bottom: 20px;
+  margin-right: 10px;
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  text-decoration: none;
+  padding: 12px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+.video-container {
+  grid-column: 3/span 8;
+  position: relative;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  display: block;
+}
+
+/* Custom styles for the controls */
+.video-container .controls {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.187);
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.video-container .controls button {
+  background: none;
+  border: none;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  font-size: 16px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -242,6 +290,7 @@ nav a.samaya-text:hover {
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {

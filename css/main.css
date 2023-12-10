@@ -246,7 +246,7 @@ nav a.samaya-text:hover {
   white-space: nowrap;
 }
 
-.video-container {
+.video-box {
   grid-column: 3/span 8;
   position: relative;
   width: 100%;
@@ -258,7 +258,7 @@ video {
 }
 
 /* Custom styles for the controls */
-.video-container .controls {
+.video-box .control {
   position: absolute;
   bottom: 2px;
   left: 0;
@@ -271,10 +271,10 @@ video {
   border-radius: 10px;
 }
 
-.video-container .controls button {
+.video-box .control button {
   background: none;
   border: none;
-  color: rgb(0, 0, 0);
+  color: rgb(90, 236, 90);
   cursor: pointer;
   font-size: 16px;
 }

@@ -1,45 +1,92 @@
+(function() {
+  // Variables
+  const player = document.querySelector("#player");
+  const videoControls = document.querySelector("#video-controls");
+  const playButton = document.querySelector("#play-button");
+  const pauseButton = document.querySelector("#pause-button");
+  const stopButton = document.querySelector("#stop-button");
+  const muteButton = document.querySelector("#mute-button");
+  const volumeSlider = document.querySelector("#change-vol");
+
+  // Functions
+  player.controls = false;
+  videoControls.classList.remove("hidden");
+
+  function playVideo() {
+    player.play();
+  }
+
+  function pauseVideo() {
+    player.pause();
+  }
+
+  function stopVideo() {
+    player.pause();
+    player.currentTime = 0;
+  }
+
+  function toggleMute() {
+    player.muted = !player.muted;
+    muteButton.innerHTML = player.muted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+  }
+
+  function changeVolume() {
+    player.volume = volumeSlider.value;
+  }
+
+  // Event Listeners
+  playButton.addEventListener("click", playVideo);
+  pauseButton.addEventListener("click", pauseVideo);
+  stopButton.addEventListener("click", stopVideo);
+  muteButton.addEventListener("click", toggleMute);
+  volumeSlider.addEventListener("change", changeVolume);
+})();
+
 
 // https://www.youtube.com/watch?v=If_Yp4TCt9c&ab_channel=TheCodeCreative
 //
+(() => {
 
+  gsap.registerPlugin(ScrollTrigger);
 
-gsap.registerPlugin(ScrollTrigger);
+  // Animation for ".sevenimage-casestudy"
+  gsap.fromTo(".sevenimage-casestudy", {
+      opacity: 0,
+  }, {
+      opacity: 1,
+      duration: 3,
+      scrollTrigger: {
+          trigger: ".seventextimage-casestudy",
+          toggleActions: "restart none none none",
+      },
+  });
 
-// Animation for ".sevenimage-casestudy"
-gsap.fromTo(".sevenimage-casestudy", {
-  opacity: 0,
-}, {
-  opacity: 1,
-  duration: 3,
-  scrollTrigger: {
-    trigger: ".seventextimage-casestudy",
-    toggleActions: "restart none none none",
-  },
-});
+  // Animation for '.codeimages'
+  gsap.from('.codeimages', {
+      duration: 1,
+      y: '-1vw',
+      opacity: 0,
+      ease: 'power2.in',
+      scrollTrigger: {
+          trigger: ".skill",
+          toggleActions: "restart none none none",
+      },
+  });
 
-// Animation for '.codeimages'
-gsap.from('.codeimages', {
-  duration: 1,
-  y: '-1vw',
-  opacity: 0,
-  ease: 'power2.in',
-  scrollTrigger: {
-    trigger: ".skill",
-    toggleActions: "restart none none none",
-  },
-});
+  // Animation for '.designimages'
+  gsap.from('.designimages', {
+      duration: 1,
+      y: '-1vw',
+      opacity: 0,
+      ease: 'power2.in',
+      scrollTrigger: {
+          trigger: ".skill",
+          toggleActions: "restart none none none",
+      },
+  });
 
-// Animation for '.designimages'
-gsap.from('.designimages', {
-  duration: 1,
-  y: '-1vw',
-  opacity: 0,
-  ease: 'power2.in',
-  scrollTrigger: {
-    trigger: ".skill",
-    toggleActions: "restart none none none",
-  },
-});
+})();
+
 
 
 
@@ -105,6 +152,8 @@ gsap.from('.designimages', {
     }
 });
 })();
+
+
 
 
 

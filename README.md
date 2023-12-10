@@ -1,5 +1,8 @@
+<img width="907" alt="image" src="https://github.com/samaya007/kafle-samaya-portfolio/assets/121986334/82ee125f-6efe-4c06-b698-1206446ddf11">
+
+
 # Project Name
-Portfolio
+Personal Portfolio
 
 ## Installation
 
@@ -17,12 +20,7 @@ Open the whole folder via any code editor (VS CODE prefered) the open index.html
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
-## History
-
-WIP
-## Credits
-
-None
+## Language
 
 ## License
 

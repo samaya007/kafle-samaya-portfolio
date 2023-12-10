@@ -57,14 +57,48 @@
     <br>
     <br>
 
-
     <section class="grid-con">
-      <div class=" l-col-start-2 l-col-end-12 col-span-4 m-col-start-2 m-col-end-12">
-        <video controls autoplay muted width="100%">
-          <source src="./video/vid.mp4" type="video/mp4"> Your browser does not support the video tag.
+      <div class="video-container">
+        <video controls poster="./image/7.png"  muted id="player">
+          <source src="./video/very-final-makeup.mp4" type="video/mp4"> Your browser does not support the video tag.
         </video>
+        <div class="controls" id="video-controls">
+          <button id="play-button">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="pause-button">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button id="stop-button">
+            <i class="fas fa-stop"></i>
+          </button>
+          <button id="mute-button">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input type="range" id="change-vol" step="0.05" min="0" max="1" value="1">
+          <!-- You can add more controls here, e.g., fullscreen, playback rate, etc. -->
+        </div>
       </div>
     </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <br>
     <section class="grid-con">
       <div class=" l-col-start-6 l-col-end-12   col-span-4       m-col-start-6 m-col-end-2 ">
@@ -279,6 +313,7 @@ sized will be used.
 
 
 
+    <a href="#" class="top">Back to Top &#8593;</a>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>

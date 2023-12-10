@@ -182,7 +182,7 @@ nav a.samaya-text:hover {
 .designimage img {
   width: 10%;
   height: auto;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth animation */
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .designimage img:hover {
@@ -212,6 +212,14 @@ nav a.samaya-text:hover {
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8));
 }
 
+.image-casestudy {
+  position: relative;
+}
+
+.sevenimage-casestudy {
+  position: relative;
+}
+
 .hero-btn {
   display: inline-block;
   text-decoration: none;
@@ -222,7 +230,7 @@ nav a.samaya-text:hover {
   background: transparent;
   position: relative;
   cursor: pointer;
-  transition: 0.6s; /* Apply transition to both hover and default state */
+  transition: 0.6s;
 }
 
 .hero-btn:hover {
@@ -246,6 +254,26 @@ nav a.samaya-text:hover {
   white-space: nowrap;
 }
 
+.yes .my-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 8px 16px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+/* Hover effect */
+.yes .my-button:hover {
+  border: 1px solid #f44336;
+  background: #f44336;
+  border-radius: 50px;
+}
+
 .video-box {
   grid-column: 3/span 8;
   position: relative;
@@ -257,7 +285,6 @@ video {
   display: block;
 }
 
-/* Custom styles for the controls */
 .video-box .control {
   position: absolute;
   bottom: 2px;
@@ -638,14 +665,6 @@ body {
   color: green;
 }
 
-.image-casestudy {
-  position: relative;
-}
-
-.sevenimage-casestudy {
-  position: relative;
-}
-
 .seven-casestudy {
   max-width: 100%;
   height: auto;
@@ -682,24 +701,4 @@ body {
   max-width: 100%;
   height: 80vh;
   object-fit: cover;
-}
-
-.yes .my-button {
-  display: inline-block;
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 8px 16px;
-  font-size: 13px;
-  background: transparent;
-  position: relative;
-  cursor: pointer;
-  transition: 0.7s;
-}
-
-/* Hover effect */
-.yes .my-button:hover {
-  border: 1px solid #f44336;
-  background: #f44336;
-  border-radius: 50px;
 }

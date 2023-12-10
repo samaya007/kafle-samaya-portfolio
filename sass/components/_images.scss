@@ -36,7 +36,7 @@
   .designimage img {
     width: 10%;
     height: auto;
-    transition: transform 0.3s ease, filter 0.3s ease; /* Add transition for smooth animation */
+    transition: transform 0.3s ease, filter 0.3s ease; 
   }
   
   .designimage img:hover {
@@ -66,5 +66,13 @@
 .codeimages img:hover {
   transform: scale(1.2); 
   filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)); 
+}
+
+.image-casestudy {
+  position: relative;
+}
+
+.sevenimage-casestudy {
+  position: relative;
 }
 

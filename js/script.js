@@ -102,7 +102,6 @@ it doesnot trigger.
 (() => {
   gsap.registerPlugin(ScrollTrigger);
 
-  // Check if the element with class .sevenimage-casestudy exists on the page
   const sevenImageCasestudy = document.querySelector(".sevenimage-casestudy");
   if (sevenImageCasestudy) {
     gsap.fromTo(sevenImageCasestudy, {
@@ -117,7 +116,6 @@ it doesnot trigger.
     });
   }
 
-  // Repeat similar checks for other elements and animations on this page
   const codeImages = document.querySelector(".codeimages");
   if (codeImages) {
     gsap.from('.codeimages', {

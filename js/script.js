@@ -1,14 +1,15 @@
+//video-controls
 (function() {
-  // Variables
+  // variables
   const player = document.querySelector("#player");
   const videoControls = document.querySelector("#video-controls");
-  const playButton = document.querySelector("#play-button");
-  const pauseButton = document.querySelector("#pause-button");
-  const stopButton = document.querySelector("#stop-button");
-  const muteButton = document.querySelector("#mute-button");
-  const volumeSlider = document.querySelector("#change-vol");
+  const playButton = document.querySelector("#play-videobutton");
+  const pauseButton = document.querySelector("#pause-videobutton");
+  const stopButton = document.querySelector("#stop-videobutton");
+  const muteButton = document.querySelector("#mute-videobutton");
+  const volumeSlider = document.querySelector("#change-videovol");
 
-  // Functions
+  // functions
   player.controls = false;
   videoControls.classList.remove("hidden");
 
@@ -34,22 +35,24 @@
     player.volume = volumeSlider.value;
   }
 
-  // Event Listeners
+  // event Listeners
   playButton.addEventListener("click", playVideo);
   pauseButton.addEventListener("click", pauseVideo);
   stopButton.addEventListener("click", stopVideo);
   muteButton.addEventListener("click", toggleMute);
-  volumeSlider.addEventListener("change", changeVolume);
+  volumeSlider.addEventListener("input", changeVolume); 
+
+// this sets the inital video to mute
+  player.muted = true;
+  muteButton.innerHTML = '<i class="fas fa-volume-mute"></i>';
 })();
 
 
-// https://www.youtube.com/watch?v=If_Yp4TCt9c&ab_channel=TheCodeCreative
-//
+/*
 (() => {
 
   gsap.registerPlugin(ScrollTrigger);
 
-  // Animation for ".sevenimage-casestudy"
   gsap.fromTo(".sevenimage-casestudy", {
       opacity: 0,
   }, {
@@ -61,7 +64,6 @@
       },
   });
 
-  // Animation for '.codeimages'
   gsap.from('.codeimages', {
       duration: 1,
       y: '-1vw',
@@ -73,7 +75,6 @@
       },
   });
 
-  // Animation for '.designimages'
   gsap.from('.designimages', {
       duration: 1,
       y: '-1vw',
@@ -85,6 +86,65 @@
       },
   });
 
+})(); */
+
+
+
+
+/*
+In the above commented code gsap was used to animated two diferent class in two differen pages
+because of that in colse it kept showing issue gsap (class) not found error
+in this new code it checks if the element with the provided class exist or not and if it does
+it doesnot trigger. 
+
+*/
+
+(() => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Check if the element with class .sevenimage-casestudy exists on the page
+  const sevenImageCasestudy = document.querySelector(".sevenimage-casestudy");
+  if (sevenImageCasestudy) {
+    gsap.fromTo(sevenImageCasestudy, {
+      opacity: 0,
+    }, {
+      opacity: 1,
+      duration: 3,
+      scrollTrigger: {
+        trigger: ".seventextimage-casestudy",
+        toggleActions: "restart none none none",
+      },
+    });
+  }
+
+  // Repeat similar checks for other elements and animations on this page
+  const codeImages = document.querySelector(".codeimages");
+  if (codeImages) {
+    gsap.from('.codeimages', {
+      duration: 1,
+      y: '-1vw',
+      opacity: 0,
+      ease: 'power2.in',
+      scrollTrigger: {
+        trigger: ".skill",
+        toggleActions: "restart none none none",
+      },
+    });
+  }
+
+  const designImages = document.querySelector(".designimages");
+  if (designImages) {
+    gsap.from('.designimages', {
+      duration: 1,
+      y: '-1vw',
+      opacity: 0,
+      ease: 'power2.in',
+      scrollTrigger: {
+        trigger: ".skill",
+        toggleActions: "restart none none none",
+      },
+    });
+  }
 })();
 
 
@@ -95,8 +155,6 @@
 
 
 
-
-//scroll animation earbuds
 
  (() => {
     const canvas = document.querySelector("#explode-view");
@@ -119,9 +177,7 @@
       images.push(img);
     }
   
-    // console.log(images);
   
-    //we are not animating a DOM element, but rather an object
     gsap.to(buds, {
       frame: 139,
       snap: "frame",
@@ -138,12 +194,10 @@
     images[0].addEventListener("onload", render);
   
     function render() {
-      // console.log(buds.frame);
-      // console.log(images[buds.frame]);
+   
       context.clearRect(0, 0, canvas.width, canvas.height);
       context.drawImage(images[buds.frame], 0, 0);
     }
-  // Update canvas size on window resize (for mobile responsiveness)
   window.addEventListener("resize", () => {
     if (isMobile) {
         canvas.width = window.innerWidth;
@@ -157,3 +211,13 @@
 
 
 
+// watched this tuitorial for gsap
+// https://www.youtube.com/watch?v=If_Yp4TCt9c&ab_channel=TheCodeCreative
+
+// for video controls
+// https://www.youtube.com/watch?v=V8_wEZD160g&ab_channel=AdamKhoury
+// class file, used class provided library but had some trouble in responsiveness and styling
+// CHAT GPT Prompt: here i want the volume default mute 
+
+// scroll animation  for earbuds
+// used class code

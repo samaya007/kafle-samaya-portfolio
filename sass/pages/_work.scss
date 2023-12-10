@@ -7,7 +7,6 @@
   color: white;
 }
 
-/* 000 */
 
 .morebilly {
   background-color: #007bff;
@@ -17,18 +16,17 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
-  display: none; /* Hide the button by default */
+  display: none; 
 }
 
 
-/* Media query for screens with a maximum width of 1199px (covers tablets and smaller screens) */
+/* Media query for screens with a maximum width of 1199px  */
 @media only screen and (max-width: 1199px) {
   .morebilly {
-    display: block; /* Display the button on mobile and tablet screens */
-    margin-top: 20px; /* Add some spacing for better appearance */
+    display: block; 
+    margin-top: 20px; 
   }
 
-  /* Adjust the max-width value as needed based on your tablet screen size */
   .seven {
     pointer-events: none;
   }
@@ -48,10 +46,9 @@
 }
 
 .seven:hover {
-  filter: blur(2px); /* Adjust the blur value as needed */
+  filter: blur(2px); 
 }
 
-/* Adjust the selector based on your HTML structure */
 .hover-content .hover-title {
   font-size: 28px;
   color: #ffffff;
@@ -63,7 +60,7 @@
 
 @media only screen and (min-width: 1199px) {
   .image-container:hover .seven {
-    filter: blur(5px); /* Adjust the blur value as needed */
+    filter: blur(5px); 
   }
 
   .hover-content {
@@ -79,3 +76,7 @@
     opacity: 1;
   }
 }
+
+
+
+

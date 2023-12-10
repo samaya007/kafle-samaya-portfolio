@@ -2,7 +2,8 @@
 
 
 # Project Name
-Personal Portfolio
+Personal Portfolio.
+Hello my name is Samaya and this is my portfolio. I am a UX Designer and here i've showcased my top projects and skills. Here I've listed 3 main projects which covers brand deasigning, rebranding, 3D modeling, coding and many more. 
 
 ## Installation
 
@@ -21,7 +22,9 @@ Open the whole folder via any code editor (VS CODE prefered) the open index.html
 5. Submit a pull request :D
 
 ## Language
+**HTML**
+**SASS/CSS**
+**JAVASCRIPT**
 
 ## License
-
 MIT

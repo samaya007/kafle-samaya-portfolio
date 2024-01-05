@@ -30,16 +30,70 @@
       </ul>
     </nav>
     <section class="grid-con">
-      <div class=" l-col-start-2 l-col-end-6 col-span-4 m-col-span-6 l-col-span-6">
-        <img src="image/heroimage.png" alt="beer-in-a-bottle" class="image-size">
+      <h2 class="hidden"> Introduction</h2>
+      <div class=" l-col-start-2 l-col-end-6 col-span-4 m-col-start-2 m-col-end-6">
+        <h1 class="about-left"> Hey </h1>
       </div>
-      <div class="l-col-span-8 col-span-4 m-col-span-6">
-        <h3 class="about-project"> I am a UX Designer. </h3>
+      <div class=" l-col-start-2 l-col-end-6 col-span-4 m-col-start-2 m-col-end-6">
+        <h2 class="about-there"> there </h2>
+      </div>
+      <div class=" l-col-start-6 l-col-end-12 col-span-4 m-col-start-7 m-col-end-12">
+        <p class="my-info"> I'm Samaya Kafle, an enthusiastic international student pursuing a journey in <b> Interactive Media Design </b>at Fanshawe College. With a keen eye for <b> creativity </b> and a <b> passion </b> for <b> innovation </b>, I thrive in the dynamic world of digital design. </h2>
+        </p>
         <br>
-        <h3 class="about-project"> passionate about designing a creative and unique user experience. </h3>
       </div>
-      <div class="l-col-start-8 l-col-end-14 col-span-4 m-col-span-6">
-        <p class="bottomtext"> I create unique and user friendly wireframe, mockup and prototype for business and startups. My approach combines an empathetic understanding of users' needs with an eye for aesthetics and functionality </p>
+      <div class=" l-col-start-6 l-col-end-12 col-span-4    m-col-start-2 m-col-end-8">
+        <p class="my-word"> Throughout my academic journey, I've had the privilege of working on diverse projects that showcase my versatility and innovative approach to design. From developing interactive websites that seamlessly blend form and function to producing compelling motion graphic animations, each project reflects my dedication to excellence.</p>
+      </div>
+    </section>
+    <section class="grid-con">
+      <div class="video-box">
+        <video controls autoplay muted id="player">
+          <source src="./video/final-demo-reel_1.mp4" type="video/mp4"> Your browser does not support the video tag.
+        </video>
+        <div class="control" id="video-controls">
+          <button id="play-videobutton">
+            <i class="fas fa-play"></i>
+          </button>
+          <button id="pause-videobutton">
+            <i class="fas fa-pause"></i>
+          </button>
+          <button id="stop-videobutton">
+            <i class="fas fa-stop"></i>
+          </button>
+          <button id="mute-videobutton">
+            <i class="fas fa-volume-up"></i>
+          </button>
+          <input type="range" id="change-videovol" step="0.05" min="0" max="1" value="1">
+        </div>
+      </div>
+    </section>
+    <section class="grid-con">
+      <div class=" l-col-start-2 l-col-end-12     col-span-4            m-col-start-2 m-col-end-12 skill">
+        <h1 class="skills"> My skills: </h1>
+      </div>
+    </section>
+    <section class="grid-con">
+      <div class=" l-col-start-2 l-col-end-12     col-span-4            m-col-start-2 m-col-end-12 designimages">
+        <h1 class="design"> Designing</h1>
+        <img src="./image/4d.png" alt="" class="cinema">
+        <img src="./image/ai.png" alt="" class="ai">
+        <img src="./image/pr.png" alt="" class="pr">
+        <img src="./image/ps.png" alt="" class="ps">
+        <img src="./image/ef.png" alt="" class="af">
+        <img src="./image/id.png" alt="" class="id">
+        <img src="./image/xd.png" alt="" class="xd">
+        <img src="./image/figma.png" alt="" class="figma">
+        <br>
+      </div>
+    </section>
+    <section class="grid-con">
+      <div class=" l-col-start-2 l-col-end-12     col-span-4            m-col-start-2 m-col-end-12 codeimages">
+        <h1 class="code"> Coding</h1>
+        <img src="image/html.png" alt="" class="html-icon">
+        <img src="./image/sass.png" alt="" class="sass-icon">
+        <img src="./image/js.png" alt="" class="js-icon">
+        <img src="./image/css.png" alt="" class="css-icon">
       </div>
     </section>
     <footer>
@@ -53,5 +107,8 @@
         <img src="./image/github.svg" alt="#" class="social-icon">
       </a>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

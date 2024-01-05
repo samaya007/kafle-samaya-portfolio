@@ -1,0 +1,51 @@
+
+
+
+
+//video
+
+
+
+  
+  .video-box {
+    grid-column: 3 / span 8;
+    position: relative;
+    width: 100%;
+  }
+  
+  video {
+    width: 100%;
+    display: block;
+  }
+  
+  .video-box .control {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.187);
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  
+  .video-box .control button {
+    background: none;
+    border: none;
+    color: rgb(90, 236, 90);
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+
+
+
+
+
+
+
+
+
+  
